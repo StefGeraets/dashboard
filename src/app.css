@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn {
+		@apply flex items-center rounded border border-gray-700 bg-gray-800 p-2.5 text-sm text-gray-400 transition hover:z-10 hover:border-sky-400 hover:bg-sky-900/50 hover:text-gray-200;
+	}
+	.btn.active {
+		@apply z-10 border-sky-700 bg-gray-700/50 text-sky-500 hover:border-sky-400 hover:bg-sky-900/50 hover:text-gray-200;
+	}
+	.btn.primary {
+		@apply border-sky-500 bg-sky-500 text-gray-100 hover:border-sky-600 hover:bg-sky-600;
+	}
+}
