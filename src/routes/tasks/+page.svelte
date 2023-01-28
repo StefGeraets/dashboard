@@ -9,8 +9,12 @@
 			repeat: true,
 			repeatAmount: 3,
 			repeatPeriod: 'Week',
-			repeatCheckins: [{ checkinDate: '28-01-2023' }, { checkinDate: '25-01-2023' }],
-			tags: [{ id: 0, name: 'Habit', type: 'habit' }]
+			repeatCheckins: [
+				{ checkinDate: '2023-01-27T10:37:36.197Z' },
+				{ checkinDate: '2023-01-25T10:37:36.197Z' }
+			],
+			tags: [{ id: 0, name: 'Habit', type: 'habit' }],
+			createdAt: '2023-01-28T10:37:36.197Z'
 		},
 		{
 			title: 'Workout',
@@ -41,13 +45,33 @@
 							><DotsVertical size="20" /></button
 						>
 					</div>
-					<div class="flex gap-2">
-						{#each todo.tags || [] as tag}
-							<span class="rounded-lg bg-fuchsia-300 px-1 py-px text-xs font-bold text-fuchsia-700"
-								>{tag.name}</span
-							>
-						{/each}
-					</div>
+					{#if todo.tags}
+						<div class="flex gap-2">
+							{#each todo.tags as tag}
+								<span
+									class="rounded-lg bg-fuchsia-300 px-1 py-px text-xs font-bold text-fuchsia-700"
+									>{tag.name}</span
+								>
+							{/each}
+						</div>
+					{/if}
+
+					{#if todo.repeat}
+						<div class="mt-2 text-sm">
+							{todo.repeatAmount} times a {todo.repeatPeriod}
+						</div>
+
+						<div class="flex gap-1">
+							{#each Array(todo.repeatAmount) as checkin}
+								<input
+									id="default-checkbox"
+									type="checkbox"
+									value=""
+									class="h-4 w-4 rounded   border-gray-600 bg-gray-600 text-sky-600 focus:ring-2 focus:ring-blue-500 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+								/>
+							{/each}
+						</div>
+					{/if}
 				</article>
 			{/each}
 		</div>
