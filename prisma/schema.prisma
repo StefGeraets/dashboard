@@ -9,3 +9,39 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Todo {
+  id             Int           @id @default(autoincrement())
+  title          String
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  repeat         Boolean       @default(false)
+  repeatAmount   Int?
+  repeatPeriod   Period?
+  repeatCheckins TodoCheckin[]
+  streak         Int?
+  completed      Boolean       @default(false)
+  tags           Tag[]
+}
+
+model TodoCheckin {
+  id          Int      @id @default(autoincrement())
+  Todo        Todo?    @relation(fields: [todoId], references: [id])
+  todoId      Int?
+  checkinDate DateTime @default(now())
+}
+
+model Tag {
+  id     Int    @id @default(autoincrement())
+  name   String
+  type   String
+  Todo   Todo?  @relation(fields: [todoId], references: [id])
+  todoId Int?
+}
+
+enum Period {
+  Day
+  Week
+  Month
+  Year
+}
