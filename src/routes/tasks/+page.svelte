@@ -36,7 +36,7 @@
 				<CreateForm toggle={toggleForm} />
 			{/if}
 			{#each data.todos as todo}
-				<Todo {todo} action="tasks?/toggleTodo" />
+				<Todo {todo} />
 			{/each}
 		</div>
 	</div>
@@ -44,7 +44,7 @@
 		<h2 class="pb-3 text-lg text-gray-300">Completed</h2>
 		<div class="flex flex-col">
 			{#each data.completedTodos as todo}
-				<Todo {todo} action="tasks?/toggleTodo" />
+				<Todo {todo} />
 			{/each}
 		</div>
 	</div>
