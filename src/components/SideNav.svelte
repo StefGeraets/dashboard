@@ -2,12 +2,9 @@
 	import { fade, fly } from 'svelte/transition';
 	import {
 		Adjustments,
-		ArrowBarLeft,
-		ArrowBarRight,
 		Calendar,
 		ChartArcs3,
 		LayoutDashboard,
-		LayoutSidebarLeftCollapse,
 		ListCheck,
 		Writing
 	} from 'tabler-icons-svelte';

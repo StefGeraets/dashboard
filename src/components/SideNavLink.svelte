@@ -23,7 +23,6 @@
 		<svelte:component
 			this={icon}
 			class="w-6 text-gray-400 group-hover:text-sky-400  {path === link ? 'text-sky-400' : ''}"
-			style=""
 		/>
 		{#if !collapsed}
 			<span in:fly={{ x: -20, delay: 200 + 100 * index }} class=" break-keep">{title}</span>

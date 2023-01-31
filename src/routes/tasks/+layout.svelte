@@ -10,7 +10,6 @@
 	<div class="flex gap-2">
 		<button class="btn gap-1"><Filter /> Filter</button>
 		<button class="btn gap-1"><ArrowsSort /> Sort</button>
-		<button class="btn primary"><Plus /></button>
 	</div>
 </header>
 
