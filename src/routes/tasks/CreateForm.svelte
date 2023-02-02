@@ -6,10 +6,10 @@
 
 	export let toggle: () => void;
 
-	let newField: HTMLInputElement;
+	let input: HTMLInputElement;
 
 	onMount(() => {
-		setTimeout(() => newField.focus(), 200);
+		input.focus();
 	});
 </script>
 
@@ -25,7 +25,7 @@
 		type="text"
 		name="title"
 		id="title"
-		bind:this={newField}
+		bind:this={input}
 		placeholder="What is your task?"
 		class="w-full rounded-lg border-none bg-gray-700 p-4 text-lg font-medium text-gray-100 shadow-md placeholder:text-gray-300 focus:ring-sky-500"
 	/>

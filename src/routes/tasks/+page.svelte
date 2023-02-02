@@ -3,7 +3,6 @@
 	import type { PageData } from './$types';
 	import CreateForm from './CreateForm.svelte';
 	import { Plus } from 'tabler-icons-svelte';
-	import { slide } from 'svelte/transition';
 
 	export let data: PageData;
 

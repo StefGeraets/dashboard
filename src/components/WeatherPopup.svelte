@@ -2,9 +2,11 @@
 	import type { ForecastAPIResponse, WeatherAPIResponse } from '$lib/types/weatherAPI';
 	import { fly } from 'svelte/transition';
 	import { getWeatherIcon } from '$lib/helpers/iconHelper';
+	import { clickOutside } from '$lib/helpers/actions';
 
 	export let weather: WeatherAPIResponse;
 	export let forecast: ForecastAPIResponse;
+	export let toggle: () => void;
 
 	const needJacket = (data: WeatherAPIResponse): 'yes' | 'no' => {
 		const feelsLike = data?.main?.feels_like;
@@ -19,6 +21,8 @@
 <div
 	class="absolute right-10 top-10 z-10 flex w-96 gap-10 rounded-md bg-gray-800 p-6 shadow-lg"
 	transition:fly={{ y: -20 }}
+	use:clickOutside
+	on:outclick={() => toggle()}
 >
 	<div class="flex flex-col justify-between space-y-4 text-gray-100">
 		<div>

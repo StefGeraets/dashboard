@@ -4,7 +4,6 @@
 	import { getWeatherIcon } from '$lib/helpers/iconHelper';
 	import type { ForecastAPIResponse, WeatherAPIResponse } from '$lib/types/weatherAPI';
 	import WeatherPopup from './WeatherPopup.svelte';
-	import type { SvelteComponent } from 'svelte';
 
 	let data: WeatherAPIResponse;
 	let forecast: ForecastAPIResponse;
@@ -35,5 +34,5 @@
 {/if}
 
 {#if showPopup}
-	<WeatherPopup weather={data} {forecast} />
+	<WeatherPopup weather={data} {forecast} toggle={togglePopup} />
 {/if}

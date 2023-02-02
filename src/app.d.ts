@@ -8,6 +8,12 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
+
+	namespace svelteHTML {
+		interface HTMLAttributes<T> {
+			'use:clickOutside'?: (node: HTMLElement) => SvelteActionReturnType;
+		}
+	}
 }
 
 export {};

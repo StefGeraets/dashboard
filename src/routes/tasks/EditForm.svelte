@@ -6,10 +6,10 @@
 
 	export let onSubmit: () => void;
 	export let todo: Todo;
-	let editField: HTMLInputElement;
+	let input: HTMLInputElement;
 
 	onMount(() => {
-		setTimeout(() => editField.focus(), 200);
+		input.focus();
 	});
 </script>
 
@@ -25,7 +25,7 @@
 
 		<input
 			type="text"
-			bind:this={editField}
+			bind:this={input}
 			name="todoTitle"
 			value={todo.title}
 			class="w-full rounded border-none bg-gray-700 p-0 py-1 pl-3 text-lg font-medium text-gray-200 focus:ring-sky-500"
