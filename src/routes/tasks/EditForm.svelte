@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import type { Todo } from '@prisma/client';
 	import { onMount } from 'svelte';
-	import { DeviceFloppy } from 'tabler-icons-svelte';
+	import { IconDeviceFloppy } from '@tabler/icons-svelte';
 
 	export let onSubmit: () => void;
 	export let todo: Todo;
@@ -34,6 +34,6 @@
 	<button
 		type="submit"
 		class="relative flex h-7 w-7 items-center justify-center text-gray-400 hover:text-sky-500"
-		><DeviceFloppy size="38" strokeWidth="1.25" class="absolute -right-1.5 top-0" /></button
+		><IconDeviceFloppy size={38} stroke={1.25} class="absolute -right-1.5 top-0" /></button
 	>
 </form>

@@ -1,21 +1,21 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import {
-		Adjustments,
-		Calendar,
-		ChartArcs3,
-		LayoutDashboard,
-		ListCheck,
-		Writing
-	} from 'tabler-icons-svelte';
+		IconAdjustments,
+		IconCalendar,
+		IconChartArcs3,
+		IconLayoutDashboard,
+		IconListCheck,
+		IconWriting
+	} from '@tabler/icons-svelte';
 	import SideNavLink from './SideNavLink.svelte';
 
 	let links = [
-		{ link: '/', title: 'Dashboard', icon: LayoutDashboard },
-		{ link: '/tasks', title: 'My Tasks', icon: ListCheck },
-		{ link: '/notes', title: 'Notes', icon: Writing },
-		{ link: '/calendar', title: 'Calendar', icon: Calendar },
-		{ link: '/productivity', title: 'Productivity', icon: ChartArcs3 }
+		{ link: '/', title: 'Dashboard', icon: IconLayoutDashboard },
+		{ link: '/tasks', title: 'My Tasks', icon: IconListCheck },
+		{ link: '/notes', title: 'Notes', icon: IconWriting },
+		{ link: '/calendar', title: 'Calendar', icon: IconCalendar },
+		{ link: '/productivity', title: 'Productivity', icon: IconChartArcs3 }
 	];
 
 	let collapsed: boolean = true;
@@ -84,7 +84,7 @@
 				class="group flex flex-col items-center space-y-1 rounded text-xs transition-colors hover:text-gray-100"
 				in:fly={{ x: -10, delay: 300 }}
 			>
-				<Adjustments size="20" class="group-hover:text-sky-300" />
+				<IconAdjustments size={20} class="group-hover:text-sky-300" />
 				<span class="sr-only">Settings</span>
 			</a>
 		{/if}

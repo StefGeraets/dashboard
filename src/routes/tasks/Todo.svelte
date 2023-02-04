@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Todo } from '@prisma/client';
 	import { slide } from 'svelte/transition';
-	import { DotsVertical } from 'tabler-icons-svelte';
+	import { IconDotsVertical } from '@tabler/icons-svelte';
 	import ActionMenu from './ActionMenu.svelte';
 	import EditForm from './EditForm.svelte';
 	import Tags from './Tags.svelte';
@@ -35,7 +35,7 @@
 					on:click|preventDefault={toggleActions}
 				>
 					<div>
-						<DotsVertical size="20" />
+						<IconDotsVertical size={20} />
 					</div>
 				</button>
 				<div class="cursor-default self-start whitespace-normal break-keep text-lg font-medium">

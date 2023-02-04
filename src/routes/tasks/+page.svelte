@@ -2,7 +2,7 @@
 	import Todo from './Todo.svelte';
 	import type { PageData } from './$types';
 	import CreateForm from './CreateForm.svelte';
-	import { Plus } from 'tabler-icons-svelte';
+	import { IconPlus } from '@tabler/icons-svelte';
 
 	export let data: PageData;
 
@@ -17,7 +17,7 @@
 	<div class="w-5/12 rounded-md bg-gray-800 px-4 py-3 shadow">
 		<div class="flex justify-between">
 			<h2 class="pb-3 text-lg text-gray-300">Habits</h2>
-			<button class="btn btn-sm "><Plus class="transition-all" /></button>
+			<button class="btn btn-sm "><IconPlus class="transition-all" /></button>
 		</div>
 		<div class="flex flex-col">
 			<article class="rounded-md bg-gray-700 p-4 text-gray-400">Habit</article>
@@ -27,7 +27,7 @@
 		<div class="flex justify-between">
 			<h2 class="pb-3 text-lg text-gray-300">Todo</h2>
 			<button class="btn btn-sm " on:click={toggleForm}
-				><Plus class="transition-all {opened ? '-rotate-45' : 'rotate-0'}" /></button
+				><IconPlus class="transition-all {opened ? '-rotate-45' : 'rotate-0'}" /></button
 			>
 		</div>
 		<div class="flex flex-col">

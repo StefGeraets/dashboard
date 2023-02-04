@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import type { Todo } from '@prisma/client';
 	import { draw, scale } from 'svelte/transition';
-	import { Check } from 'tabler-icons-svelte';
+	import { IconCheck } from '@tabler/icons-svelte';
 
 	export let todo: Todo;
 </script>
@@ -37,8 +37,8 @@
 				/>
 			</svg>
 		{:else}
-			<Check
-				size="24"
+			<IconCheck
+				size={24}
 				class="text-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 			/>
 		{/if}

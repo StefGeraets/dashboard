@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Search } from 'tabler-icons-svelte';
+	import { IconSearch } from '@tabler/icons-svelte';
 	import LiveTime from './LiveTime.svelte';
 	import Weather from './Weather.svelte';
 </script>
@@ -8,7 +8,7 @@
 	<label
 		class="group flex items-center space-x-4 rounded-md bg-gray-800 px-2 py-2 text-gray-400 focus-within:ring-1 focus-within:ring-sky-700"
 	>
-		<Search class="group-focus-within:text-sky-500" />
+		<IconSearch class="group-focus-within:text-sky-500" />
 		<input
 			type="input"
 			name="search"

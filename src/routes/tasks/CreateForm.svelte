@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { DeviceFloppy } from 'tabler-icons-svelte';
+	import { IconDeviceFloppy } from '@tabler/icons-svelte';
 
 	export let toggle: () => void;
 
@@ -32,6 +32,6 @@
 	<button
 		type="submit"
 		class="rounded-lg border border-gray-600 bg-gray-700/20 p-4 text-sky-500 transition-all hover:brightness-125 active:scale-95"
-		><DeviceFloppy size="32" /></button
+		><IconDeviceFloppy size={32} /></button
 	>
 </form>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { fly } from 'svelte/transition';
-	import { Edit, Trash } from 'tabler-icons-svelte';
+	import { IconEdit, IconTrash } from '@tabler/icons-svelte';
 
 	export let id: Number;
 	export let onEdit: () => void;
@@ -17,7 +17,7 @@
 		class="flex items-center gap-2 rounded p-1 hover:bg-gray-700"
 		on:click={onEdit}
 	>
-		<Edit size="24" /> Edit
+		<IconEdit size={24} /> Edit
 	</button>
 
 	<form
@@ -29,7 +29,7 @@
 	>
 		<input type="hidden" name="todoId" value={id} />
 		<button type="submit" class="flex w-full items-center gap-2 rounded p-1 hover:bg-gray-700">
-			<Trash size="24" /> Delete
+			<IconTrash size={24} /> Delete
 		</button>
 	</form>
 </div>
